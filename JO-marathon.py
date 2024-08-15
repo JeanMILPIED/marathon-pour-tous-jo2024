@@ -23,9 +23,9 @@ st.title("Your Rank in the Marathon Pour Tous - JO PARIS - 2024")
 st.divider()
 
 # 3. Form input for the participant's number
-col1,col2, col3 = st.columns([4,5,10])
-col1.image("./image/maillot.JPG")
-col2.header("Your Number")
+col1,col2, col3 = st.columns([1,5,5])
+#col1.image("./image/maillot.JPG")
+col2.header("🏃‍♂️Your Number")
 with col3.form(key='rank_form'):
     bib_number = st.number_input('Input Your Number', min_value=1, max_value=100000)
     submit_button = st.form_submit_button(label='Get Your Rank')
