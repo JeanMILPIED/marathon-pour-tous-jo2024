@@ -19,15 +19,15 @@ st.set_page_config(page_title="Paris Marathon Pour Tous - Rank 🥇")
 st.image("./image/marathon.jpg", use_column_width=True)
 
 # 2. Title
-st.title("Marathon Pour Tous - JO - PARIS2024")
-st.title("Get Your (unofficial) **Rank**")
+st.write("#### Marathon Pour Tous - JO - PARIS2024")
+st.write("#### Get Your (unofficial) *Rank*")
 st.caption("warning - this is an unofficial Paris 2024 JO website")
 st.divider()
 
 # 3. Form input for the participant's number
 col2, col3 = st.columns([5,5])
 #col1.image("./image/maillot.JPG")
-col2.header("🏃‍♂️Your Number")
+col2.write("#### 🏃‍♂️ Your Number")
 with col3.form(key='rank_form'):
     bib_number = st.number_input('Input Your Number', min_value=1, max_value=100000)
     submit_button = st.form_submit_button(label='Get Your Rank')
@@ -44,15 +44,15 @@ if submit_button:
             st.error('Your number is not found or no valid time recorded.')
             pass
         st.write("Your info")
-        st.table(participant)
+        st.table(participant.T)
     else:
-        st.error('Your number is not found or no valid time recorded.')
+        st.error('Your number is not found or no valid time has been recorded.')
 
 
 #5
 st.divider()
 st.write('''
-#### The statistics  
+#### The race statistics  
 - 20136 names on the start  
 - 2814 did not finish or did not start the race 
 - fastest time net: '02:12:24'  
