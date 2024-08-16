@@ -19,7 +19,9 @@ st.set_page_config(page_title="Paris Marathon Pour Tous - Rank 🥇")
 st.image("./image/marathon.jpg", use_column_width=True)
 
 # 2. Title
-st.title("Your Rank in the Marathon Pour Tous - JO PARIS - 2024")
+st.title("Marathon Pour Tous - JO PARIS - 2024")
+st.write("**Get Your (unofficial) Rank**)
+st.caption("warning - this is an unofficial Paris 2024 JO website")
 st.divider()
 
 # 3. Form input for the participant's number
@@ -52,16 +54,18 @@ st.divider()
 st.write('''
 #### The stats  
 - 20136 names on the start  
-- 2814 did not finish  
+- 2814 did not finish or did not start the race 
 - fastest time net: '02:12:24'  
 - fastest time brut: '02:24:43'  
 ''')
 st.divider()
 st.image("./image/marathon.jpg", use_column_width=True)
 #6
-st.caption("The results are based on the official website from JO PARIS 2024")
-st.caption("https://marathonpourtous.paris2024.org/fr/actus/2024/retrouve-tes-photos-ton-resultat/59")
+st.caption("These (unofficial) rank results are based on the official website from JO PARIS 2024")
+st.caption("link here: https://marathonpourtous.paris2024.org/fr/actus/2024/retrouve-tes-photos-ton-resultat/59")
 
 #6
 st.divider()
-st.write("if you like the site, you can add a ⭐ here: https://github.com/JeanMILPIED/marathon-pour-tous-jo2024")
+st.write("**Credits**")
+st.write("If you like the site, you can click on the ⭐ on top of page ⤴️")
+
