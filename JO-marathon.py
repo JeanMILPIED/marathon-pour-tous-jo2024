@@ -20,14 +20,14 @@ st.image("./image/marathon.jpg", use_column_width=True)
 
 # 2. Title
 st.title("Marathon Pour Tous - JO - PARIS2024")
-st.title("Get Your (unofficial) *Rank*")
-st.write("*Warning - this is an unofficial Paris2024 JO website*")
+st.title("Get Your (unofficial) Rank")
+st.write("*Warning - this is an Unofficial Paris2024 JO Website*")
 st.divider()
 
 # 3. Form input for the participant's number
 col2, col3 = st.columns([5,5])
 #col1.image("./image/maillot.JPG")
-col2.title("🏃‍♂️ Your Number")
+col2.write("#### 🏃‍♂️ Your Number")
 with col3.form(key='rank_form'):
     bib_number = st.number_input('Input Your Number', min_value=1, max_value=100000)
     submit_button = st.form_submit_button(label='Get Your Rank')
@@ -51,7 +51,7 @@ if submit_button:
 
 #5
 st.divider()
-st.title('''
+st.write('''
 #### The race statistics  
 - 20136 names on the start  
 - 2814 did not finish or did not start the race 
