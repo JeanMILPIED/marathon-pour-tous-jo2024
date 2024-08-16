@@ -38,9 +38,9 @@ if submit_button:
     if participant is not None:
         try:
             rank_net=int(participant['rank_net'].values[0])
-            top_net=int(rank_net/20136*100)
+            top_net=int(rank_net/20136*100)+1
             rank_brut=int(participant['rank_brut'].values[0])
-            top_brut=int(rank_brut/20136*100)
+            top_brut=int(rank_brut/20136*100)+1
             st.success('Based on your **net time**, Your rank is **{}** on 20136 registered participants (Top {}%)'.format(rank_net, top_net))
             st.success('Based on your **brut time**, Your rank is **{}** on 20136 registered participants (Top {}%)'.format(rank_brut, top_brut))
         except:
