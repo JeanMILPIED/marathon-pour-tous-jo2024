@@ -3,7 +3,7 @@ import pandas as pd
 
 #data
 df=pd.read_csv("scrapped_results_good.csv", index_col=0)
-df_ranked=df[["name","api_number","finish_time_brut","finish_time_net","rank_net","rank_brut"]]
+df_ranked=df[["name_anonym","api_number","finish_time_brut","finish_time_net","rank_net","rank_brut"]]
 # Function to get rank based on bib number
 def get_rank(bib_number):
     participant = df_ranked[df_ranked['api_number'] == bib_number]
