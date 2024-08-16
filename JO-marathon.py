@@ -47,7 +47,7 @@ if submit_button:
             st.error('Oups, your number is not found or no valid time recorded.')
             pass
         st.write("Your information")
-        st.table(participant.T)
+        st.table(participant.reset_index(drop=True).T)
     else:
         st.error('Your number is not found or no valid time has been recorded.')
 
