@@ -20,7 +20,7 @@ st.image("./image/marathon.jpg", use_column_width=True)
 
 # 2. Title
 st.title("Marathon Pour Tous - JO PARIS - 2024")
-st.write("**Get Your (unofficial) Rank**")
+st.header("Get Your (unofficial) **Rank**")
 st.caption("warning - this is an unofficial Paris 2024 JO website")
 st.divider()
 
