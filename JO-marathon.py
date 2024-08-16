@@ -68,4 +68,5 @@ st.caption("link here: https://marathonpourtous.paris2024.org/fr/actus/2024/retr
 st.divider()
 st.write("**Credits**")
 st.write("If you like the site, you can click on the ⭐ on top of page ⤴️")
+st.write("If you want to support the initiative, I love coffee ☕ : https://www.buymeacoffee.com/jeanmilpied ")
 
