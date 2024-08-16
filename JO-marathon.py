@@ -20,8 +20,8 @@ st.image("./image/marathon.jpg", use_column_width=True)
 
 # 2. Title
 st.title("Marathon Pour Tous - JO - PARIS2024")
-st.title("Get Your (unofficial) Rank")
-st.write("*Warning - this is an Unofficial Paris2024 JO Website*")
+st.title("🥇 Get Your Rank 🥇")
+st.write("*Warning - This Is An Unofficial Paris2024 JO Website*")
 st.divider()
 
 # 3. Form input for the participant's number
@@ -37,13 +37,16 @@ if submit_button:
     participant = get_rank(bib_number)
     if participant is not None:
         try:
-            st.success('Based on your **net time**, Your rank is **{}** on 20136 participants (names registered at the start)'.format(int(participant['rank_net'].values[0])))
-            st.success('Based on your **brut time**, Your rank is **{}** on 20136 participants (names registered at the start)'.format(
-                int(participant['rank_brut'].values[0])))
+            rank_net=int(participant['rank_net'].values[0]))
+            top_net=int(rank_net/20136*100)
+            rank_brut=int(participant['rank_brut'].values[0]))
+            top_brut=int(rank_brut/20136*100)
+            st.success('Based on your **net time**, Your rank is **{}** on 20136 registered participants (Top {}%)'.format(rank_net, top_net)
+            st.success('Based on your **brut time**, Your rank is **{}** on 20136 registered participants (Top {}%)'.format(rank_brut, top_brut)
         except:
-            st.error('Your number is not found or no valid time recorded.')
+            st.error('Oups, your number is not found or no valid time recorded.')
             pass
-        st.write("Your info")
+        st.write("Your information")
         st.table(participant.T)
     else:
         st.error('Your number is not found or no valid time has been recorded.')
@@ -52,19 +55,20 @@ if submit_button:
 #5
 st.divider()
 st.write('''
-#### The race statistics  
+#### The Race Statistics  
 - 20136 names on the start  
-- 2814 did not finish or did not start the race 
-- fastest time net: '02:12:24'  
-- fastest time brut: '02:24:43'  
+- 2814 did not start or did not finish the race 
+- Fastest time net: '02:12:24'  
+- Fastest time brut: '02:24:43'  
 ''')
 st.divider()
 st.image("./image/marathon.jpg", use_column_width=True)
+
 #6
 st.caption("These (unofficial) rank results are based on the official website from JO PARIS 2024")
 st.caption("link here: https://marathonpourtous.paris2024.org/fr/actus/2024/retrouve-tes-photos-ton-resultat/59")
 
-#6
+#7
 st.divider()
 st.write("#### Credits")
 st.write("If you like the site, you can click on the ⭐ on top of page ⤴️")
